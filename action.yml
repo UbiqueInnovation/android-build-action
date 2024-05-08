@@ -9,7 +9,6 @@ inputs:
 runs:
   using: "docker"
   image: "docker://harbor.office.ubique.rocks/dockerhub-public-cache/cimg/android:2024.04.1"
-  entrypoint: "./gradlew"
-  working-directory: ${{ inputs.appModuleDirectory }}
+  entrypoint: "${{ inputs.appModuleDirectory }}/gradlew"
   args:
     - ${{ inputs.gradleArgs }}
