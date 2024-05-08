@@ -9,6 +9,8 @@ inputs:
 runs:
   using: "docker"
   image: "docker://harbor.office.ubique.rocks/dockerhub-public-cache/cimg/android:2024.04.1"
-  entrypoint: "${{ inputs.appModuleDirectory }}/gradlew"
+  entrypoint: "/bin/bash"
   args:
-    - ${{ inputs.gradleArgs }}
+    - "-c"
+    - "${{ inputs.appModuleDirectory }}/gradlew"
+    - "${{ inputs.gradleArgs }}"
