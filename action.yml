@@ -3,12 +3,16 @@ description: "Build an Android app and upload it to UBDiag"
 inputs:
   appModuleDirectory:
     description: "App Module Directory (where gradlew is located)"
+  gradleTarget:
+    description: "Gradle target"
+    required: true
   gradleArgs:
     description: "Gradle arguments"
-    required: true
+    required: false
 runs:
   using: "docker"
   image: "docker://harbor.office.ubique.rocks/dockerhub-public-cache/cimg/android:2024.04.1"
   entrypoint: "echo | xargs ./gradlew"
   args:
+    - "${{ inputs.gradleTarget }}"
     - "${{ inputs.gradleArgs }}"
