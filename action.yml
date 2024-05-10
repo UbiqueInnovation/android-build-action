@@ -16,4 +16,4 @@ runs:
   args:
     - "${{ inputs.gradleTarget }}"
     - "${{ inputs.gradleArgs }}"
-    - "--debug"
+    - "--info"
