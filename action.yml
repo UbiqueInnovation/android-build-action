@@ -15,3 +15,5 @@ runs:
   entrypoint: "./gradlew"
   args:
     - "${{ inputs.gradleTarget }}"
+    - "${{ inputs.gradleArgs }}"
+    - "--debug"
