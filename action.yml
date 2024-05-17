@@ -1,5 +1,5 @@
 name: "UBDiag Upload"
-description: "Build an Android app and upload it to UBDiag"
+description: "Build an Android app with gradle"
 inputs:
   gradleTarget:
     description: "Gradle target"
