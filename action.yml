@@ -1,5 +1,5 @@
-name: "UBDiag Upload"
-description: "Build an Android app with gradle"
+name: "Android Gradle Task"
+description: "Runs an Android Gradle task"
 inputs:
   gradleTarget:
     description: "Gradle target"
